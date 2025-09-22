@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes, } from 'react-router-dom';
-import { Footer, Header, PageNotFound } from './components';
+import { Footer, Header, PageNotFound, Login, Register } from './components';
 import { Home, RoomDetails } from './pages';
 
 
@@ -24,10 +24,12 @@ const App = () => {
         <Routes>
           <Route path={'/'} element={<Home />} />
           <Route path={'/room/:id'} element={<RoomDetails />} />
+          <Route path={'/login'} element={<Login />} />
           <Route path={'*'} element={<PageNotFound />} />
+          <Route path={'/register'} element={<Register />} />
         </Routes>
 
-        <Footer />
+        {/* <Footer /> */}
 
       </BrowserRouter>
     </main>
