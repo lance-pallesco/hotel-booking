@@ -5,6 +5,7 @@ module.exports = {
       primary: 'Gilda Display',
       secondary: 'Barlow',
       tertiary: 'Barlow Condensed',
+      third: 'Inter',
     },
     container: {
       padding: {

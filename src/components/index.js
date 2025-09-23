@@ -9,5 +9,8 @@ export { default as Footer } from './Footer';
 export { default as Header } from './Header';
 export { default as Rooms } from './Rooms';
 export { default as Room } from './Room';
+export { default as Login } from './Login';
+export { default as BackgroundSlider } from './BackgroundSlider';
+export { default as Register } from './Register';
 
 export { default as ScrollToTop } from '../utils/ScrollToTop';

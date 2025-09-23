@@ -19,7 +19,14 @@ const Header = () => {
     );
   });
 
-  const navLinks = ['Home', 'Rooms', 'Restaurant', 'Spa', 'Contact'];
+  const navLinks = [
+    { label: 'Home', path: '/' },
+    { label: 'Rooms', path: '/' },
+    { label: 'Contact', path: '/' },
+    { label: 'About', path: '/' },
+    { label: 'Login', path: '/login' },
+  ];
+  
 
   return (
     <header
@@ -42,11 +49,15 @@ const Header = () => {
         <nav className={`${header ? 'text-primary' : 'text-white'}
         flex gap-x-4 lg:gap-x-8 font-tertiary tracking-[3px] text-[15px] items-center uppercase`}>
           {
-            navLinks.map(link =>
-              <Link to="/" className='transition hover:text-accent' key={link}>
-                {link}
+            navLinks.map(({ label, path }) => (
+              <Link
+                to={path}
+                key={label}
+                className='hover:text-accent transition'
+              >
+                {label}
               </Link>
-            )
+            ))
           }
         </nav>
 
